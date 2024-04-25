@@ -1,0 +1,26 @@
+/* albums.css */
+
+.album-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjusted for responsiveness */
+  gap: 20px;
+}
+
+.album-container div {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.album-container div h4 {
+  margin: 0;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ccc;
+}
+
+.album-container div img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

@@ -1,0 +1,48 @@
+/* reviews.css */
+
+.review-list {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.review-item {
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.review-item h3 {
+  margin-top: 0;
+}
+
+.edit-mode .edited-title,
+.edit-mode .edited-content {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.edit-mode .edited-content {
+  height: 100px;
+}
+
+.normal-mode button {
+  margin-right: 10px;
+}
+
+.save-button,
+.edit-button,
+.delete-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.save-button:hover,
+.edit-button:hover,
+.delete-button:hover {
+  background-color: #0056b3;
+}

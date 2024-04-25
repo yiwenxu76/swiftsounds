@@ -1,0 +1,60 @@
+/* Layout */
+.home-container {
+  width: 90%; /* Use a percentage-based width for responsiveness */
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Welcome Section */
+.welcome-section h2 {
+  font-size: 2rem; /* Use relative font size */
+  margin-bottom: 1rem;
+}
+
+.welcome-section p {
+  font-size: 1rem; /* Use relative font size */
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.625rem 1.25rem; /* Use relative padding */
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+/* Latest Reviews */
+.latest-reviews li {
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+/* Loading Indicator */
+.loading {
+  font-size: 1.25rem;
+}
+
+/* Album Container */
+.album-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.album-img {
+  width: 100%;
+  max-width: 100%; /* Ensure images do not overflow on smaller screens */
+  border-radius: 8px;
+}
+
+/* Background */
+body {
+  background-color: #8391be;
+}

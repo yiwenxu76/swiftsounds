@@ -1,0 +1,43 @@
+generator client {
+  provider = "prisma-client-js"
+  previewFeature = ["referentialIntegrity"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+// User model to store user information
+model User {
+  id          Int      @id @default(autoincrement())
+  auth0Id     String   @unique @default("")
+  email       String   @unique
+  name        String?  
+  age         Int?     
+  signUpDate  DateTime @default(now())
+  reviews     Review[] @relation("UserReview")
+}
+
+// Review model to store user reviews for albums
+model Review {
+  id          Int      @id @default(autoincrement())
+  title       String
+  content     String
+  createdAt   DateTime @default(now())
+  user        User     @relation("UserReview", fields: [userId], references: [id])
+  userId      Int      
+  album       Album    @relation("AlbumReview", fields: [albumId], references: [id])
+  albumId     String
+}
+
+// Album model to store album information
+model Album {
+  id           String      @id 
+  title        String   @unique
+  artist       String
+  releaseDate  String
+  totalTracks  Int
+  reviews      Review[] @relation("AlbumReview")
+}

@@ -1,0 +1,35 @@
+.auth-debugger {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .debugger-section {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .debugger-section p {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .debugger-content {
+    overflow: auto;
+    max-height: 200px;
+    padding: 5px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .auth-debugger {
+      flex-direction: column;
+    }
+  
+    .debugger-section {
+      width: 100%;
+    }
+  }
+  
